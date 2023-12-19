@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="loginpagedesign.css">
+</head>
+<body>
+    <div class="main_div">   
+         <div class= "login-container2" >    
+            <div class="flip-container">
+                <div class="flipper">
+                <div class="img-front"> <img id="img1"src="IMA.png" alt="imalogo"></div>
+                <div class="img-back"><img id="img2" src="shusrut-rishi.jpg" alt="Back Image"></div>
+    </div>
+</div>
+</div>
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="loginID">Login ID</label>
+        <input type="text" id="loginID" name="loginID" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="captcha">CAPTCHA</label>
+        <input type="text" id="captcha" name="captcha" required>
+        <!-- CAPTCHA image display -->
+        <img src="captcha_image.jpg" alt="CAPTCHA Image">
+      </div>
+      <div class="form-group">
+        <label for="otp">OTP</label>
+        <input type="text" id="otp" name="otp" required>
+        <button type="button" id="generateOTP" disabled>Generate OTP</button>
+      </div>
+      <button type="submit" id = "login" disabled>Login</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

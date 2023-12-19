@@ -1,0 +1,131 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Login Container */
+  .login-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Login Form Styling */
+  .login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 45%;
+    padding: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d157f0;
+  }
+  .main_div{
+    display: flex;
+    background-color: #d157f0;
+    border-top-left-radius:500px ;
+  }
+  .login-container2 {
+   background-color: #d157f0;
+   border-top-right-radius:500px ;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    justify-content:center;
+    align-items:center;
+  }
+  .flip-container{
+    perspective: 1000px;
+  }
+  .flipper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+  }
+  
+  .flip-container:hover .flipper {
+    transform: rotateY(180deg);
+  }
+  
+  .img-front,.img-back {
+    
+    width: 256px;
+    height: 300px;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .img-front {
+    z-index: 2;
+  }
+  
+  .img-back {
+    transform: rotateY(180deg);
+  }
+  #img1{
+    background-color: #d157f0;
+  }
+  #img1,#img2{
+    border: 0px white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    height: 256px;
+    width: 300px;
+  }
+  #login:disabled:hover,#generateOTP:disabled:hover {
+    opacity: 1; /* Adjust the opacity to visually indicate the disabled state */
+    cursor:pointer;
+    transition: transform 0.5s ease;
+    transform: translateX(150px)
+  }
+  
+  #login:not(:disabled), #generateOTP:not(:disabled) {
+    opacity: 1;
+    cursor:pointer;
+    
+  }
