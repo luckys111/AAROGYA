@@ -169,7 +169,7 @@
   button {
     width: 100%;
     padding: 10px;
-    background-color: #f04d38;
+    background-color: #7e7b7b;
     color: #fff;
     border: none;
     border-radius: 0px;
@@ -178,7 +178,7 @@
   }
   
   button:hover {
-    background-color: #ff8843 2s;
+    background-color: #242323 1s;
   }
   .footer {
     display: flex;
