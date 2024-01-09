@@ -138,12 +138,44 @@ body {
     justify-content: center;
     align-items: center;
    }
-#banner{
+.banner{
  height: 65vh;
  width: 100%;
- background-image: url(hospital4.webp);
+ background-image: url(University-Lucknow-jpg-webp.webp);
+ background-position: center;
  background-size: cover;
 }
+.tagline {
+  font: bold;
+  font-family: "audiowide";
+  font-size:40px;
+  color: red;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 162, 0); /* The typwriter cursor */
+  border-radius: 100px;
+  white-space: nowrap; /* Keeps the content on a single line */
+  
+  margin-left: 185px; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(60,start) infinite,
+    blink-caret 0.5s infinite ;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 73% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0%,100% { border-color: rgb(236, 235, 233) }
+  50% { border-color: rgb(22, 20, 20) }
+}
+    .tagline-div{
+     padding-top: 15%;
+    }
 .footer {
     display: flex;
     justify-content: space-between;
@@ -198,5 +230,10 @@ body {
   font-size: larger;
 }
 #login{
-color: #000000;
+  background-color:rgb(156, 156, 248);
+  color: #ccc;
+  border: 0px;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
 }
