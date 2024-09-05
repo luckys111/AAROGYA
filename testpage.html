@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="teststyle.css">
+    <!-- <script src="test.js"></script> -->
 </head>
 <header>
     <div id="top-panel">
@@ -27,7 +28,7 @@
                             <li><a href="#">Sitemap</a></li>
                         </ul>
                     </li>
-
+                    <li><a href="aboutpage.html">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -37,41 +38,70 @@
 </header>
 
 <body>
-    <main id="main-class">
-        <div id="bgimg">
-            <div id="bg">
-
+    <div class="main_div">
+        <div class="login-container2">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="img-front"> <img id="img1" src="ima-logo.png" alt="imalogo"></div>
+                    <div class="img-back"><img id="img2" src="shusrut-rishi.jpg" alt="Back Image"></div>
+                </div>
             </div>
         </div>
-        <div class="wrapper">
+        <div class="login-container">
+            <form class="login-form" onsubmit="myfunc(event)">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="loginID"></label>
+                    <input type="text" id="loginID" name="loginID" placeholder="Login ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="captcha"></label>
+                    <input type="text" id="captcha" name="captcha" placeholder="Captcha" required>
+                    <!-- CAPTCHA image display -->
+                    <img src="captcha_image.jpg" alt="CAPTCHA Image">
+                </div>
+                <div class="form-group">
+                    <label for="otp"></label>
+                    <input type="text" id="otp" name="otp" placeholder="OTP" required>
+                </div>
+                <div>
+                    <button type="button" id="generateOTP" disabled>Generate OTP</button>
 
-            <form class="form">
-                <div class="pageTitle title">Contact Us </div>
-                <div class="secondaryTitle title">Please fill this to contact us.</div>
-                <input type="text" class="name formEntry" placeholder="Name" />
-                <input type="text" class="email formEntry" placeholder="Email" />
-                <textarea class="message formEntry" placeholder="Message"></textarea>
-                <input type="checkbox" class="termsConditions" value="Term">
-                <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br>
-                <button class="submit formEntry" onclick="thanks()">Submit</button>
+                    <button type="submit" id="login" disabled>Login</button>
+                    <input type="submit" value="submit" />
+                    <a class="href1" href="http://127.0.0.1:5500/createnewaccount.html">Don't have an account?Sign-up</a>
+                </div>
             </form>
         </div>
-    </main>
-    <script src="app.js"></script>
-</body>
-<footer>
-    <div class="footer">
-        <div id="app_icon">
-            <a id="icon1" href="instagram.com"><img src="icons8-instagram.gif" alt="insta"></a>
-            <a id="icon2" href="facebook.com"><img src="icons8-facebook.gif" alt="facebook"></a>
-            <a id="icon3" href="youtube.com"><img src="icons8-youtube.gif" alt="youtube"></a>
-            <a id="icon4" href="linkdn.com"><img src="icons8-linkedin.gif" alt="linkdin"></a>
-        </div>
-        <div class="footercontent">
-
-            <p> Copyright © 2010-2023. All Rights Reserved </p>
-        </div>
     </div>
-</footer>
+    <footer>
+        <div class="footer">
+            <div id="app_icon">
+                <a id="icon1" href="instagram.com"><img src="icons8-instagram.gif" alt="insta"></a>
+                <a id="icon2" href="facebook.com"><img src="icons8-facebook.gif" alt="facebook"></a>
+                <a id="icon3" href="youtube.com"><img src="icons8-youtube.gif" alt="youtube"></a>
+                <a id="icon4" href="linkdn.com"><img src="icons8-linkedin.gif" alt="linkdin"></a>
+            </div>
+            <div class="footercontent">
+
+                <p> Copyright © 2010-2023. All Rights Reserved </p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function myfunc(event) {
+            event.preventDefault();
+            var name = document.getElementById("loginID").value;
+            var password = document.getElementById("password").value;
+
+            localStorage.setItem('is_name', name);
+            localStorage.setItem('is_password', password);
+        }
+    </script>
+</body>
 
 </html>
