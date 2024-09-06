@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Trirong";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -35,11 +35,13 @@ body {
 
 #login {
     margin-right: 40px;
+    font-size: medium;
     font-weight: bold;
 }
 
 #login1 {
     margin-right: 10px;
+    font-size: medium;
     font-weight: bold;
 }
 
@@ -160,9 +162,27 @@ ul li ul li a {
     background-repeat: no-repeat;
 }
 
+.tagline2 {
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #3078b7;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 162, 0);
+    /* The typwriter cursor */
+    border-radius: 0px;
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin-left: 90px;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em;
+    /* Adjust as needed */
+}
+
 .tagline {
-    font: bold;
-    font-family: "Montserrat";
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
     color: #000000;
     overflow: hidden;
@@ -172,7 +192,25 @@ ul li ul li a {
     border-radius: 0px;
     white-space: nowrap;
     /* Keeps the content on a single line */
-    margin-left: 185px;
+    margin-left: 105px;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em;
+    /* Adjust as needed */
+}
+
+.tagline3 {
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 162, 0);
+    /* The typwriter cursor */
+    border-radius: 0px;
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin-left: 105px;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .05em;
     /* Adjust as needed */
@@ -204,11 +242,12 @@ ul li ul li a {
 }
 
 .tagline-div {
-    padding-top: 15%;
+    padding-top: 9%;
 }
 
 .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 100%;
     background-color: #ffffff;
@@ -230,6 +269,7 @@ ul li ul li a {
 
 #app_icon {
     display: flex;
+    margin-top: 15%;
 }
 
 #icon1,
@@ -259,21 +299,21 @@ ul li ul li a {
 }
 
 #login {
-    background-color: rgb(156, 156, 248);
+    background-color: #3CA0E7;
     color: #ccc;
     border: 0px;
-    border-radius: 20px;
+    border-radius: 5px;
     width: 100px;
-    height: 30px;
+    height: 50px;
 }
 
 #login1 {
-    background-color: rgb(156, 156, 248);
+    background-color: #3CA0E7;
     color: #ccc;
     border: 0px;
-    border-radius: 20px;
+    border-radius: 5px;
     width: 100px;
-    height: 30px;
+    height: 50px;
 }
 
 
@@ -329,4 +369,175 @@ ul li ul li a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #3ca0e7;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ffd13b;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #3ca0e7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #000;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.footer-section a {
+    color: #3ca0e7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #000;
+}
+
+
+/* Basic styling for the quicklink section */
+
+#dacsab {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    /* background: linear-gradient(135deg, #f0f4f8, #cfd9e8); */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quicklink-container {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    color: #0056b3;
+}
+
+.quicklink-item {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quicklink-item p {
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quicklink-item:hover p {
+    background: #007bff;
+    /* Change to your preferred hover background color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quicklink-item svg {
+    width: 40px;
+    height: 40px;
+}
+
+.quicklink-label {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    /* Change to your preferred text color */
+    transition: color 0.3s ease;
+}
+
+.quicklink-item:hover .quicklink-label {
+    color: #0056b3;
+    /* Change to your preferred hover text color */
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.quicklink-item:hover {
+    animation: bounce 0.6s ease;
+}
+
+#design {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Half viewport height */
+    background-color: rgb(170, 100, 173);
+    /* Blue background color */
+    border-bottom-left-radius: 100vw;
+    /* Create a semicircular effect */
+    border-bottom-right-radius: 100vw;
+    /* Create a semicircular effect */
+    z-index: -1;
+    /* Make sure it is behind all other content */
 }
