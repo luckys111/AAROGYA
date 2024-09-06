@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - AAROGYA</title>
+    <style>
+        /* Basic CSS for layout and styling */
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .first {
+            margin: 10;
+            padding: 10;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #3ca0e7;
+        }
+        
+        p {
+            text-align: center;
+            color: #555;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        select,
+        input,
+        textarea,
+        button {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: blue;
+        }
+        
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        /* Responsive design */
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Book an Appointment Today</h1>
+
+
+        <form id="appointmentForm">
+            <label for="careType">What type of care are you looking for?</label>
+            <select id="careType" name="careType">
+                <option value="general-consultation">General Consultation</option>
+                <option value="specialist-consultation">Specialist Consultation</option>
+                <option value="emergency-care">Emergency Care</option>
+                <option value="routine-check-up">Routine Check-Up</option>
+                <option value="follow-up">Follow-Up Appointment</option>
+                <option value="telemedicine">Telemedicine Consultation</option>
+                <option value="mental-health">Mental Health Counseling</option>
+            </select>
+
+            <label for="mainIssue">What is the main issue you want to address?</label>
+            <textarea id="mainIssue" name="mainIssue" placeholder="Describe your symptoms or concerns"></textarea>
+
+            <label for="location">Enter your location (City or ZIP Code)</label>
+            <input type="text" id="location" name="location" placeholder="e.g., New York, NY">
+
+            <button type="button" onclick="findDoctors()">Find Doctors </button>
+
+        </form>
+
+        <div id="map">
+            <img src="Screenshot 2024-09-05 192803.png" alt="your lacation is incorrect" width="900" height="400">
+        </div>
+    </div>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            const defaultLocation = {
+                lat: 40.7128,
+                lng: -74.0060
+            }; // Default to New York City
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: defaultLocation,
+            });
+        }
+
+        // Function to find providers based on user input and display them on the map
+        function findDoctors() {
+            const location = document.getElementById("location").value;
+            if (!location) {
+                alert('Please enter a location.');
+                return;
+            }
+
+            const geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                'address': location
+            }, function(results, status) {
+                if (status === 'OK') {
+                    const map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 12,
+                        center: results[0].geometry.location
+                    });
+
+
+                    // Example of adding a marker
+                    new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map,
+                        title: 'Provider Location'
+                    });
+
+                    // Additional logic to filter providers based on careType and mainIssue
+                    // and place markers on the map would go here.
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    </script>
+
+    <!-- Load the Google Maps API -->
+
+
+</body>
+
+</html>

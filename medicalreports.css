@@ -1,0 +1,206 @@
+/* General Reset
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.report-section {
+    margin-bottom: 30px;
+}
+
+.report-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    border-top: 2px solid #333;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+} */
+
+
+/* General Reset */
+
+
+/* General Reset */
+
+
+/* General Reset */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #eaf4fc;
+    /* Light blue background */
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+header {
+    border-bottom: 2px solid #007bff;
+    /* Blue color for a real report feel */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #007bff;
+    /* Matching the border color */
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.report-section {
+    margin-bottom: 30px;
+}
+
+.report-section h2 {
+    font-size: 1.5em;
+    color: #007bff;
+    /* Blue color for section headings */
+    border-bottom: 2px solid #007bff;
+    /* Blue color line below heading */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1faff;
+    /* Light blue background for header cells */
+    color: #007bff;
+    /* Blue color for header text */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Slightly different color for rows */
+}
+
+table tbody tr:hover {
+    background-color: #f1faff;
+    /* Light blue hover effect */
+}
+
+footer {
+    border-top: 2px solid #007bff;
+    /* Blue color for footer line */
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #007bff;
+    /* Blue color for footer text */
+}

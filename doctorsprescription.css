@@ -1,0 +1,112 @@
+/* General Reset */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    /* Light grey background */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+header {
+    border-bottom: 2px solid #007bff;
+    /* Blue color for a real prescription feel */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #007bff;
+    /* Matching the border color */
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.prescription-details,
+.doctor-info {
+    margin-bottom: 30px;
+}
+
+.prescription-details h2,
+.doctor-info h2 {
+    font-size: 1.5em;
+    color: #007bff;
+    /* Blue color for section headings */
+    border-bottom: 2px solid #007bff;
+    /* Blue color line below heading */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    /* Blue background for header cells */
+    color: #fff;
+    /* White text color for header */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Slightly different color for rows */
+}
+
+table tbody tr:hover {
+    background-color: #f1faff;
+    /* Light blue hover effect */
+}
+
+footer {
+    border-top: 2px solid #007bff;
+    /* Blue color for footer line */
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #007bff;
+    /* Blue color for footer text */
+}
+
+footer p {
+    margin: 5px 0;
+}

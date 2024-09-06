@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Trirong";
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 #logo {
     margin-left: 40px;
     height: auto;
-    max-width: 200px;
+    max-width: 120px;
 }
 
 #nav ul {
@@ -34,6 +35,11 @@ body {
 
 #login {
     margin-right: 40px;
+    font-weight: bold;
+}
+
+#login1 {
+    margin-right: 10px;
     font-weight: bold;
 }
 
@@ -66,7 +72,7 @@ nav {
         ul li {
             list-style: none;
             margin: 0 auto;
-            border-left: 2px solid #3ca0e7;
+            border-left: 2px solid #238dd9;
             display: block;
             padding: 0 30px;
             position: relative;
@@ -145,30 +151,31 @@ ul li ul li a {
 }
 
 .banner {
+    margin-top: 20px;
     height: 65vh;
     width: 100%;
-    background-image: url(University-Lucknow-jpg-webp.webp);
-    background-position: center;
-    background-size: cover;
+    background-image: url(banner.avif);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .tagline {
     font: bold;
-    font-family: "audiowide";
+    font-family: "Montserrat";
     font-size: 40px;
-    color: #0f4f5e9e;
+    color: #000000;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     border-right: .15em solid rgb(255, 162, 0);
     /* The typwriter cursor */
-    border-radius: 100px;
+    border-radius: 0px;
     white-space: nowrap;
     /* Keeps the content on a single line */
     margin-left: 185px;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .05em;
     /* Adjust as needed */
-    animation: typing 5s steps(60, start) infinite, blink-caret 0.5s infinite;
 }
 
 
@@ -233,15 +240,6 @@ ul li ul li a {
     /* For spacing between adjacent icons */
 }
 
-.description {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    /* max-width: 600px; */
-    justify-content: space-between;
-    padding: 20px;
-}
-
 .description .des {
     width: 300px;
     height: 150px;
@@ -269,9 +267,34 @@ ul li ul li a {
     height: 30px;
 }
 
+#login1 {
+    background-color: rgb(156, 156, 248);
+    color: #ccc;
+    border: 0px;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+
+/* #appoint1 {
+    background-color: rgb(42, 132, 222);
+    color: #ea9090;
+    border: 0px;
+    border-radius: 10px;
+    width: 100px;
+    height: 45px;
+}
+
+.appointment-div {
+    display: flex;
+    align-items: center;
+} */
+
 .description {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .des {

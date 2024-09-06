@@ -1,8 +1,6 @@
-    *,
+*,
 *:before,
 *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -11,170 +9,220 @@ html {
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    color: #333332;
-    font-family: Lora, serif;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.4;
-    text-rendering: optimizeLegibility;
-}
-
-.skill-set li:hover {
-    background: #3498db;
+    line-height: 1.6;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
 }
 
 h1 {
-    color: rgba(0, 0, 0, .75);
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease;
 }
 
 .wrapper {
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .left {
-    background-color: rgba(0, 0, 0, .025);
-    border-right: 1px solid rgba(0, 0, 0, .05);
-    float: right;
-    height: 100%;
-    margin-left: -1px;
-    min-width: 256px;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    min-height: 100vh;
+    animation: slideInLeft 1s ease-in-out;
     position: fixed;
-    width: 33.33%;
 }
 
 .right {
-    float: right;
-    height: 100%;
-    position: relative;
-    width: 66.66%;
+    padding: 20px;
+    margin-left: 30%;
+    width: 70%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .name-hero {
-    background: rgba(0, 0, 0, .001);
-    bottom: 0;
-    height: 290px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 85%;
+    background: rgba(29, 20, 159, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: zoomIn 0.7s ease;
 }
 
 .me-img {
     background: url(https://media-exp1.licdn.com/dms/image/C4E03AQGnLq_IB_mf8Q/profile-displayphoto-shrink_400_400/0/1631022739752?e=1648684800&v=beta&t=eICUjHeH_g9GQEItmEMK1j2gCADwqfjrlccSD_5za58) no-repeat center center;
-    background-size: 100%;
-    background-position: 0px;
-    border-radius: 100%;
+    background-size: cover;
+    border-radius: 50%;
     height: 150px;
+    width: 150px;
     margin: 0 auto;
     position: relative;
-    width: 150px;
+    transition: transform 0.3s ease;
 }
 
 .name-hero h1 {
-    font-family: Open Sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
+    margin-top: 15px;
     text-align: center;
+    color: #ecf0f1;
 }
 
 .name-hero h1 em {
-    color: rgba(0, 0, 0, .3);
+    color: #3498db;
     font-style: normal;
     font-weight: 700;
 }
 
 .name-hero p {
-    color: rgba(0, 0, 0, .75);
-    font-size: .75em;
+    color: #bdc3c7;
+    font-size: 0.9em;
     line-height: 1.5;
-    margin: 0 8px 0 0;
-    text-align: center;
+    margin: 5px 0;
 }
 
 .name-hero .name-text {
-    margin: 0 auto;
+    margin: 20px auto;
     width: 85%;
+    animation: fadeIn 1.5s ease;
 }
 
 .inner {
-    margin: 0 auto;
     max-width: 975px;
     padding: 3em;
-}
-
-.inner h1 {
-    font-size: 1.75em;
-}
-
-.inner p {
-    color: rgba(0, 0, 0, .5);
-}
-
-.inner p em {
-    color: rgba(0, 0, 0, 1);
-    font-style: normal;
+    animation: fadeInUp 1s ease;
 }
 
 .inner section {
     margin: 100px auto;
 }
 
-ul {
-    list-style-type: none;
-    margin-top: -10px;
-    max-width: 570px;
+.inner h1 {
+    font-size: 1.75em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.inner p {
+    color: #7f8c8d;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.inner p em {
+    color: #2c3e50;
+    font-style: normal;
+}
+
+.skill-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     padding: 0;
 }
 
 .skill-set li {
-    background: rgba(0, 0, 0, .75);
+    background: #3498db;
+    color: #fff;
     border-radius: 5px;
-    color: #FFF;
-    display: inline-block;
-    list-style: none;
-    margin: 15px 15px 0 0;
+    margin: 10px;
     padding: 10px;
-    text-align: justify;
+    font-size: 0.9em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 48em) {
+.skill-set li:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.handmade {
+    text-align: right;
+    margin-top: 100px;
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 1em;
+}
+
+.handmade em {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.25em;
+    margin-left: 5px;
+    color: #2c3e50;
+}
+
+
+/* Keyframes for Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
     .right,
     .left {
-        float: none;
-        position: relative !important;
         width: 100%;
+        margin-left: 0;
         min-height: 500px;
     }
-    .handmade {
-        text-align: center !important;
-        margin-top: 0px !important;
-    }
-    @media screen and (max-width: 75em) {
-        body {
-            font-size: 16px;
-        }
-    }
-    @media screen and (max-width: 60em) {
-        body {
-            font-size: 14px;
-        }
-    }
-    .clearfix:after {
-        content: " ";
-        /* Older browser do not support empty content */
-        visibility: hidden;
-        display: block;
-        height: 0;
-        clear: both;
+    .left {
+        position: relative;
     }
     .handmade {
-        text-align: right;
-        margin-top: 100px;
+        text-align: center;
+        margin-top: 20px;
     }
-    .handmade em {
-        font-family: 'Shadows Into Light', cursive;
-        font-size: 1.25em;
-        margin-left: 5px;
-    }
+}
