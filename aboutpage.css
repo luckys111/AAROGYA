@@ -7,20 +7,22 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 #top-panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffd13b;
     padding: 10px;
+    height: 80px;
 }
 
 #logo {
     margin-left: 40px;
-    height: auto;
-    max-width: 100px;
+   
+    height: 80;
+    max-width: 200px;
 }
+
 
 #nav ul {
     list-style-type: none;

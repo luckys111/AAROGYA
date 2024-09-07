@@ -10,12 +10,13 @@
     font-family: Arial, sans-serif;
     background-color: #dbd8d8;
   }
-  #top-panel{
+  #top-panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffd13b;
     padding: 10px;
+    height: 80px;
 }
 #logo{
     margin-left: 40px;

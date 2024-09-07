@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: rgb(191, 224, 224);
 }
 
 #top-panel {
@@ -15,12 +16,14 @@ body {
     align-items: center;
     background-color: #ffd13b;
     padding: 10px;
+    height: 80px;
 }
 
 #logo {
     margin-left: 40px;
-    height: auto;
-    max-width: 120px;
+   
+    height: 80;
+    max-width: 200px;
 }
 
 #nav ul {

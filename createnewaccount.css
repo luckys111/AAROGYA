@@ -9,17 +9,20 @@
     font-family: Arial, sans-serif;
     background-color: #e6e6e6;
   }
-  #top-panel{
+  
+  #top-panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffd13b;
     padding: 10px;
+    height: 80px;
 }
-#logo{
+
+#logo {
     margin-left: 40px;
    
-    height: auto;
+    height: 80;
     max-width: 200px;
 }
 #nav ul{
